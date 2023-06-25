@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter,HashRouter } from "react-router-dom";
 
 import Home from "./routes/Home"
 import Navbar from "./routes/Navbar";
@@ -19,12 +19,15 @@ import AssetsGrid from "./components/assets-components/AssetsGrid";
 import AssetsCopyTrading from "./components/assets-components/AssetsCopyTrading";
 import { AssetsFutures } from "./components/assets-components/AssetsFutures";
 function App() {
-
   
 
-    return (
+  console.log(window.innerWidth )
+  
+   if(window.innerWidth < 768){
+    return(
       <div className="App">
-      <BrowserRouter >
+        
+      <HashRouter >
           <Routes>
 
             <Route exact path='/' element={<Home />} />
@@ -47,12 +50,22 @@ function App() {
 
           </Routes>
           <Navbar />
-      </BrowserRouter>
+      </HashRouter>
 
         
       </div>
 
-    );
+    )
+
+   }else{
+      return(
+        <div className="error">
+        <p>This website is available for devices with screen width less than 768px</p>
+        
+      </div>
+      )
+   }
+    
 
     // return (
 
