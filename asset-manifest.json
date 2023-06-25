@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/bingex-app-project/static/css/main.fcceba2a.css",
+    "main.css": "/bingex-app-project/static/css/main.7449ae59.css",
     "main.js": "/bingex-app-project/static/js/main.337cbfbd.js",
     "static/media/slick.svg": "/bingex-app-project/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/bingex-app-project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/bingex-app-project/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/bingex-app-project/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/bingex-app-project/index.html",
-    "main.fcceba2a.css.map": "/bingex-app-project/static/css/main.fcceba2a.css.map",
+    "main.7449ae59.css.map": "/bingex-app-project/static/css/main.7449ae59.css.map",
     "main.337cbfbd.js.map": "/bingex-app-project/static/js/main.337cbfbd.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcceba2a.css",
+    "static/css/main.7449ae59.css",
     "static/js/main.337cbfbd.js"
   ]
 }
