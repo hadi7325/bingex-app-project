@@ -1,0 +1,100 @@
+{
+    "types": [
+        {
+            "id": "1",
+            "name": "USD",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "2",
+            "name": "BHS",
+            "currency": "$",
+            "img": "/image/TRX.webp"
+        },
+        {
+            "id": "3",
+            "name": "SDSD",
+            "currency": "$",
+            "img": "/image/GNS.webp"
+        },
+        {
+            "id": "4",
+            "name": "FEF",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "5",
+            "name": "FEE",
+            "currency": "$",
+            "img": "/image/TRX.webp"
+        },
+        {
+            "id": "6",
+            "name": "FEF",
+            "currency": "$",
+            "img": "/image/GNS.webp"
+        },
+        {
+            "id": "7",
+            "name": "SDS",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "8",
+            "name": "JTJ",
+            "currency": "$",
+            "img": "/image/TRX.webp"
+        },
+        {
+            "id": "9",
+            "name": "FDSF",
+            "currency": "$",
+            "img": "/image/GNS.webp"
+        },
+        {
+            "id": "10",
+            "name": "FDS",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "11",
+            "name": "FDS",
+            "currency": "$",
+            "img": "/image/TRX.webp"
+        },
+        {
+            "id": "12",
+            "name": "KHJ",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "13",
+            "name": "KKH",
+            "currency": "$",
+            "img": "/image/GNS.webp"
+        },
+        {
+            "id": "14",
+            "name": "JV",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "15",
+            "name": "POI",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        },
+        {
+            "id": "16",
+            "name": "CXZ",
+            "currency": "$",
+            "img": "/image/BTC.webp"
+        }
+    ]
+}

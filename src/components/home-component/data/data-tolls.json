@@ -1,0 +1,30 @@
+{
+    "tools": [
+        {
+            "id": "1",
+            "image": "image/tools/1.svg",
+            "name" : "Deposit"
+
+        },
+        {
+            "id": "2",
+            "image": "image/tools/2.svg",
+            "name" : "Copy Trade"
+
+        },
+        {
+            "id": "3",
+            "image": "image/tools/3.svg",
+            "name" : "Grid Trading"
+
+        },
+        {
+            "id": "4",
+            "image": "image/tools/4.svg",
+            "name" : "NFT"
+
+        }
+       
+    ]
+}
+

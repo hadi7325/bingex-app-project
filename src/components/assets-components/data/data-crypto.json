@@ -1,0 +1,265 @@
+{
+    "crypto": [
+        {
+            "id": "1",
+            "name" : "BTC/USDT",
+            "img" : "/image/BTC.webp",
+            "least" : 220100,
+            "most" : 235655,
+            "status": "-1%",
+            "cat" : "Perpetual Futures"
+            
+
+        },
+        {
+            "id": "2",
+            "name" : "ETH/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 123456,
+            "most" : 256486,
+            "status": "+10%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "3",
+            "name" : "AVAX/USDT",
+                        "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 15616156,
+            "status": "+45%",
+            "cat" : "Top Gainers"
+
+            
+
+        },
+        {
+            "id": "4",
+            "name" : "ASX/USDT",
+                        "img" : "/image/BTC.webp",
+
+            "least" : 1562,
+            "most" : 235655,
+            "status": "-12%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "5",
+            "name" : "APT/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "-145%",
+            "cat" : "New Listing"
+
+            
+
+        },
+        {
+            "id": "6",
+            "name" : "GXL/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 12345,
+            "most" : 235655,
+            "status": "1%",
+            "cat" : "Perpetual Futures"
+
+            
+
+        },
+        {
+            "id": "7",
+            "name" : "ENG/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "-1%",
+            "cat" : "New Listing"
+
+            
+
+        },
+        {
+            "id": "8",
+            "name" : "LDO/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "-1%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "9",
+            "name" : "SHO/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "+12%",
+            "cat" : "Perpetual Futures"
+
+            
+
+        },
+        {
+            "id": "10",
+            "name" : "LMN/USDT",
+                        "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "-56%",
+            "cat" : "Top Gainers"
+
+            
+
+        },
+        {
+            "id": "11",
+            "name" : "BTC/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "+23%",
+            "cat" : "New Listing"
+
+            
+
+        },
+        {
+            "id": "12",
+            "name" : "BTC/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "-1%",
+            "cat" : "Top Gainers"
+
+            
+
+        },
+        {
+            "id": "13",
+            "name" : "LMO/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "-12%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "14",
+            "name" : "FGH/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "-1%",
+            "cat" : "New Listing"
+
+            
+
+        },
+        {
+            "id": "15",
+            "name" : "ASDVSD/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" :23565,
+            "status": "-6%",
+            "cat" : "New Listing"
+
+            
+
+        },
+        {
+            "id": "16",
+            "name" : "DFD/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" :22010,
+            "most" : 3565,
+            "status": "+10%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "17",
+            "name" : "KIO/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "-0.5%",
+            "cat" : "Perpetual Futures"
+
+            
+
+        },
+        {
+            "id": "18",
+            "name" : "GIG/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "+5%",
+            "cat" : "Standard Futures"
+
+            
+
+        },
+        {
+            "id": "19",
+            "name" : "POI/USDT",
+            "img" : "/image/BTC.webp",
+
+            "least" : 220100,
+            "most" : 235655,
+            "status": "+25%",
+            "cat" : "Top Gainers"
+
+            
+
+        },
+        {
+            "id": "20",
+            "name" : "CPJ/USDT",
+            "img" : "/image/BTC.webp",
+             
+            "least" : 220100,
+            "most" : 235655,
+            "status": "+35%",
+            "cat" : "New Listing"
+
+            
+
+        }
+       
+       
+    ]
+}
+

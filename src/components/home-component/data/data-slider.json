@@ -1,0 +1,31 @@
+{
+    "slides": [
+        {
+            "id": "1",
+            "image": "image/slide1.webp"
+        },
+        {
+            "id": "2",
+            "image": "image/slide2.webp"
+        },
+        {
+            "id": "3",
+            "image": "image/slide3.webp"
+        },
+        {
+            "id": "4",
+            "image": "image/slide4.webp"
+        },
+        {
+            "id": "5",
+            "image": "image/slide5.webp"
+        },
+        {
+            "id": "6",
+            "image": "image/slide6.webp"
+        }
+     
+       
+    ]
+}
+

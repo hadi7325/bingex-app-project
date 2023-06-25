@@ -1,0 +1,2910 @@
+//main
+.setting-page {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0ecec;
+    z-index: 10000;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        right: 0;
+    }
+
+    .title {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        position: relative;
+
+        .back {
+            position: absolute;
+            left: 15px;
+            font-size: 20px;
+            color: #454545;
+        }
+
+        .text {
+            font-size: 18px;
+            color: #454545;
+            font-weight: bold;
+        }
+    }
+
+    .label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+
+        span {
+            color: #999;
+            font-size: 14px;
+        }
+    }
+
+    .setting-items {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+
+        .item {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            color: #454545;
+        }
+    }
+}
+
+.search-page {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0ecec;
+    z-index: 10000;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+        right: 0;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: solid 1px rgb(218, 215, 215);
+            width: 80%;
+            background-color: transparent;
+        }
+
+        .cancel {
+            font-size: 18px;
+            color: #6b6bd2;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    background-color: #f1f2f2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 10;
+
+    .content-tab {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .links {
+            width: 70%;
+            overflow-x: auto;
+
+            .link {
+                display: flex;
+                align-items: center;
+                width: 300px;
+            }
+        }
+
+        .icons {
+            display: flex;
+        }
+
+        .tab-link {
+            margin-left: 13px;
+            color: #424242;
+            font-size: 16px;
+
+            svg {
+                font-size: 20px;
+            }
+
+            &.active {
+                color: #353535;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+
+.crypto-list-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+
+        .content {
+            left: 0;
+        }
+
+    }
+
+    .content {
+        width: 80%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        background-color: #fff;
+        height: inherit;
+        transition: all 0.3s ease;
+
+        .search-box {
+            width: 80%;
+            border: solid 1px rgb(197, 192, 192);
+            position: absolute;
+            top: 15px;
+            left: 10%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+
+            input {
+                border: none;
+                padding: 10px;
+                outline: none;
+                width: 90%;
+            }
+
+            svg {
+                color: #454545;
+                font-weight: bold;
+            }
+        }
+
+        .crypto-list-markets-menu {
+            width: 100%;
+            overflow-x: auto;
+            border-bottom: solid 1px rgb(209, 209, 209);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            z-index: 10;
+            border-bottom: solid 1px rgb(212, 207, 207);
+            background-color: #fff;
+
+            .menu-item {
+                width: 530px;
+                display: flex;
+                flex-wrap: nowrap;
+
+                .item {
+                    padding: 10px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    color: #454545;
+                }
+
+                .item.active {
+                    border-bottom: solid 1px #000;
+                }
+            }
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 102px;
+            right: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 7px 5px;
+            background-color: #fff;
+            box-shadow: 0 0 3px 1px #f0f0f0;
+
+            .name {
+                font-size: 14px;
+                color: #999;
+                margin-left: 15px;
+            }
+
+            .price {
+                display: flex;
+
+                div {
+                    margin-right: 25px;
+                    font-size: 14px;
+                    color: #999;
+                }
+
+                .last-price {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .crypto-list-item {
+            left: 0;
+            overflow: auto;
+            position: absolute;
+            top: 125px;
+            background: #fff;
+            width: 100%;
+            height: 90vh;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                padding: 0 10px;
+
+                .name {
+                    color: #424242;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                .desc {
+                    text-align: end;
+
+                    .price {
+                        margin-right: 10px;
+
+                        .most {
+                            color: #555;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .percentage {
+                        color: rgb(0, 221, 120);
+                        font-size: 12px;
+                    }
+
+                    .percentage.red {
+                        color: rgb(246, 70, 93);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.crypto-name-futures {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: -20px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 15px;
+
+
+    .name-box {
+        display: flex;
+        align-items: center;
+
+        svg {
+            display: flex;
+            font-size: 17px;
+        }
+
+        .name {
+            color: #222;
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+        .changes {
+            margin-left: 10px;
+            color: rgb(154 11 32);
+            font-size: 14px;
+        }
+    }
+
+    .menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 10px;
+            font-size: 18px;
+            color: #424242;
+        }
+
+        .drop {
+            position: absolute;
+            top: 100%;
+            right: 5%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 1px rgb(214, 213, 213);
+            z-index: 10;
+            width: 250%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            li {
+                padding: 10px;
+                font-size: 14px;
+                color: #454545;
+            }
+        }
+
+    }
+}
+
+
+//filter
+
+.filter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 100px;
+
+    .left {
+        display: flex;
+        align-items: center;
+      justify-content: space-between;
+      width: 53%;
+        .cross-margin {
+            width: 49%;
+
+            .default-margin {
+                border: solid 1px rgb(197, 195, 195);
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                font-size: 10px;
+                border-radius: 5px;
+
+            }
+
+            .drop-menu {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 200;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+
+                .content {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0%;
+                    right: 0%;
+                    transition: all 0.3s ease-in-out;
+                    background-color: #fff;
+                    padding: 15px;
+                    border-radius: 10px 10px 0 0;
+
+                    .title {
+                        font-size: 18px;
+                        color: #454545;
+                        font-weight: bold;
+                    }
+
+                    .items {
+                        width: 100%;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        .item {
+                            padding: 10px;
+                            border: solid 1px rgb(180, 174, 174);
+                            padding: 8px;
+                            border-radius: 3px;
+                            width: 48%;
+                            color: #454545;
+                            text-align: center;
+
+                            &.active {
+                                border-color: #6b6bd2;
+                                color: #6b6bd2;
+                            }
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+
+                        div {
+                            color: #555;
+                            font-size: 14px;
+                            line-height: 30px;
+                            display: block;
+                            display: none;
+                        }
+
+                        .cross.active {
+                            display: block;
+                        }
+
+                        .isolated.active {
+                            display: block;
+                        }
+
+                    }
+
+                    .action {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        div {
+                            width: 48%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            text-align: center;
+                            border: solid 1px #6b6bd2;
+                        }
+
+                        .cancel {
+                            color: #6b6bd2;
+                            border-color: #6b6bd2;
+
+                        }
+
+                        .ok {
+                            color: #fff;
+                            background-color: #6b6bd2;
+                        }
+                    }
+
+                    .cancel {
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        padding: 10px;
+                        text-align: center;
+                        color: #454545;
+                        font-weight: bold;
+                    }
+                }
+
+
+            }
+
+            .drop-menu.active {
+                opacity: 1;
+                visibility: visible;
+
+
+            }
+        }
+
+        .leverage {
+            width: 49%;
+
+            .default {
+                border: solid 1px rgb(197, 195, 195);
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                font-size: 12px;
+                border-radius: 5px;
+
+                .value {
+                    display: flex;
+                    align-items: center;
+                    width: 80%;
+                    justify-content: space-around;
+
+                    .red {
+                        color: rgb(246, 70, 93);
+                    }
+
+                    .green {
+                        color: rgb(0, 221, 120);
+                    }
+                }
+            }
+
+            .drop-menu {
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 200;
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.3s ease;
+
+                .content {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 0%;
+                    right: 0%;
+                    transition: all 0.3s ease-in-out;
+                    background-color: #fff;
+                    padding: 15px;
+                    border-radius: 10px 10px 0 0;
+
+                    .title {
+                        font-size: 18px;
+                        color: #454545;
+                        font-weight: bold;
+                    }
+
+                    .items {
+                        width: 100%;
+
+                      
+                        margin-top: 20px;
+
+                        .item {
+                            padding: 10px;
+                            border-radius: 3px;
+                            width: 100%;
+                            color: #454545;
+                            text-align: center;
+              
+                            .change-long{
+                                width: 100%;
+                                border: solid 1px rgb(180, 174, 174);
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 10px;
+                                border-radius: 5px;
+                               .text{
+                                color: #454545;
+                                font-weight: bold;
+                               }
+                               .control{
+                                display: flex;
+                                align-items: center;
+                                svg{
+                                    background-color: #e6dfdf;
+                                    border-radius: 3px;
+                                    padding: 5px;
+                                    font-size: 20px;
+                                }
+                                .value{
+                                    margin: 0 15px;
+                                    color: rgb(0, 221, 120);
+                                }
+                               }
+                            }
+                            .change-long.red{
+                                .control{
+                                    .value{
+                                        color: rgb(246, 70, 93);
+                                    }
+                                }
+                            }
+                            input{
+                                width: 100%;
+                                margin-top: 12px;
+                            }
+
+                          
+                        }
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+
+                        div {
+                            color: #555;
+                            font-size: 14px;
+                            line-height: 30px;
+                            display: block;
+                            display: none;
+                        }
+
+                        .cross.active {
+                            display: block;
+                        }
+
+                        .isolated.active {
+                            display: block;
+                        }
+
+                    }
+
+                    .action {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        div {
+                            width: 48%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            text-align: center;
+                            border: solid 1px #6b6bd2;
+                        }
+
+                        .cancel {
+                            color: #6b6bd2;
+                            border-color: #6b6bd2;
+
+                        }
+
+                        .ok {
+                            color: #fff;
+                            background-color: #6b6bd2;
+                        }
+                    }
+
+                    .cancel {
+                        width: 100%;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        padding: 10px;
+                        text-align: center;
+                        color: #454545;
+                        font-weight: bold;
+                    }
+                }
+
+
+            }
+
+            .drop-menu.active {
+                opacity: 1;
+                visibility: visible;
+
+
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+
+        .time {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .funding {
+            color: #999;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+    }
+}
+
+//crypto-information 
+
+.crypto-information-futures {
+    display: flex;
+    margin-top: 10px;
+    border-top: solid 1px rgb(209, 208, 208);
+
+    .open-close {
+        width: 50%;
+
+        .box-open-close {
+            width: 100%;
+            display: flex;
+            border-bottom: solid 1px rgb(197, 196, 196);
+
+            span {
+                width: 50%;
+                padding: 10px;
+                text-align: center;
+                color: #454545;
+
+            }
+
+            .open.active {
+
+                color: #6b6bd2;
+                border-bottom: solid 1px #6b6bd2;
+            }
+
+            .close.active {
+
+                color: #6b6bd2;
+                border-bottom: solid 1px #6b6bd2;
+            }
+        }
+
+        .type-menu {
+            margin-top: 20px;
+
+            .default {
+                display: flex;
+                font-weight: bold;
+                align-items: center;
+                justify-content: space-between;
+                color: #454545;
+                position: relative;
+                border: solid 1px rgb(202, 198, 198);
+                border-radius: 5px;
+                padding: 5px;
+
+                svg {
+                    transition: all 0.3s ease;
+
+                    &.active {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .drop-menu {
+                    width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    z-index: 200;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+
+                    .content {
+                        width: 90%;
+                        position: absolute;
+                        bottom: 0%;
+                        right: 5%;
+                        transition: all 0.3s ease-in-out;
+
+                        .items {
+                            width: 100%;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            margin-bottom: 10px;
+
+                            li {
+                                padding: 10px;
+                            }
+                        }
+
+                        .cancel {
+                            width: 100%;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            padding: 10px;
+                            text-align: center;
+                            color: #454545;
+                            font-weight: bold;
+                        }
+                    }
+
+
+                }
+
+                .drop-menu.active {
+                    opacity: 1;
+                    visibility: visible;
+
+                    .content {
+                        bottom: 15%;
+                    }
+                }
+            }
+        }
+
+        .amount {
+            margin-top: 5px;
+            width: 100%;
+
+            .market-message {
+                padding: 5px;
+                background-color: #b5b5e4;
+                border: solid 1px rgb(148, 143, 143);
+                border-radius: 5px;
+                margin: 7px 0;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            .trailing-stop {
+                width: 100%;
+                border: solid 1px rgb(204, 202, 202);
+                border-radius: 5px;
+                font-size: 17px;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px;
+                display: none;
+
+                &.active {
+                    display: flex;
+                }
+
+                input {
+                    padding: 12px;
+                    border: none;
+                    outline: none;
+                    width: 80%;
+                }
+
+                .type-Trailing {
+                    .default-type {
+
+                        .menu {
+                            display: flex;
+                            align-items: center;
+                            font-size: 14px;
+                            color: #454545;
+
+                            svg {
+                                margin-left: 5px;
+                            }
+                        }
+
+                        .drop-menu {
+                            width: 100%;
+                            height: 100vh;
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            z-index: 200;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+
+                            .content {
+                                width: 90%;
+                                position: absolute;
+                                bottom: 0%;
+                                right: 5%;
+                                transition: all 0.3s ease-in-out;
+
+                                .items {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    margin-bottom: 10px;
+
+                                    .title {
+                                        width: 100%;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #999;
+                                        background-color: #f0ecec;
+                                        padding: 5px;
+                                        border-radius: 10px 10px 0 0;
+                                    }
+
+                                    .item {
+                                        padding: 10px;
+                                    }
+                                }
+
+                                .cancel {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    padding: 10px;
+                                    text-align: center;
+                                    color: #454545;
+                                    font-weight: bold;
+                                }
+                            }
+
+
+                        }
+
+                        .drop-menu.active {
+                            opacity: 1;
+                            visibility: visible;
+
+                            .content {
+                                bottom: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .trigger-price {
+                width: 100%;
+                border: solid 1px rgb(204, 202, 202);
+                border-radius: 5px;
+                font-size: 17px;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px;
+                display: none;
+
+                &.active {
+                    display: flex;
+                }
+
+                input {
+                    padding: 12px;
+                    border: none;
+                    outline: none;
+                    width: 80%;
+                }
+
+                .type-Trigger {
+                    .default-type {
+
+                        .menu {
+                            display: flex;
+                            align-items: center;
+                            font-size: 14px;
+                            color: #454545;
+
+                            svg {
+                                margin-left: 5px;
+                            }
+                        }
+
+                        .drop-menu {
+                            width: 100%;
+                            height: 100vh;
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            z-index: 200;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+
+                            .content {
+                                width: 90%;
+                                position: absolute;
+                                bottom: 0%;
+                                right: 5%;
+                                transition: all 0.3s ease-in-out;
+
+                                .items {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    margin-bottom: 10px;
+
+                                    .title {
+                                        width: 100%;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #999;
+                                        background-color: #f0ecec;
+                                        padding: 5px;
+                                        border-radius: 10px 10px 0 0;
+                                    }
+
+                                    .item {
+                                        padding: 10px;
+                                    }
+                                }
+
+                                .cancel {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    padding: 10px;
+                                    text-align: center;
+                                    color: #454545;
+                                    font-weight: bold;
+                                }
+                            }
+
+
+                        }
+
+                        .drop-menu.active {
+                            opacity: 1;
+                            visibility: visible;
+
+                            .content {
+                                bottom: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .text {
+                width: 100%;
+                border: solid 1px rgb(204, 202, 202);
+                border-radius: 5px;
+                font-size: 17px;
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 5px;
+
+                input {
+                    padding: 12px;
+                    border: none;
+                    outline: none;
+                    width: 80%;
+                }
+
+                .type-amount {
+                    .default-type {
+
+                        .menu {
+                            display: flex;
+                            align-items: center;
+                            font-size: 14px;
+                            color: #454545;
+
+                            svg {
+                                margin-left: 5px;
+                            }
+                        }
+
+                        .drop-menu {
+                            width: 100%;
+                            height: 100vh;
+                            position: fixed;
+                            top: 0;
+                            right: 0;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            z-index: 200;
+                            visibility: hidden;
+                            opacity: 0;
+                            transition: all 0.3s ease;
+
+                            .content {
+                                width: 90%;
+                                position: absolute;
+                                bottom: 0%;
+                                right: 5%;
+                                transition: all 0.3s ease-in-out;
+
+                                .items {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    flex-direction: column;
+                                    margin-bottom: 10px;
+
+                                    .title {
+                                        width: 100%;
+                                        font-size: 14px;
+                                        text-align: center;
+                                        color: #999;
+                                        background-color: #f0ecec;
+                                        padding: 5px;
+                                        border-radius: 10px 10px 0 0;
+                                    }
+
+                                    .item {
+                                        padding: 10px;
+                                    }
+                                }
+
+                                .cancel {
+                                    width: 100%;
+                                    background-color: #fff;
+                                    border-radius: 10px;
+                                    padding: 10px;
+                                    text-align: center;
+                                    color: #454545;
+                                    font-weight: bold;
+                                }
+                            }
+
+
+                        }
+
+                        .drop-menu.active {
+                            opacity: 1;
+                            visibility: visible;
+
+                            .content {
+                                bottom: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .label {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                span {
+                    font-size: 10px;
+                    color: rgb(131, 129, 129);
+
+                    .amount {
+                        color: rgb(0, 221, 120);
+                    }
+
+                    .amount.red {
+                        color: rgb(246, 70, 93);
+                        text-align: end;
+                    }
+                }
+            }
+
+            .text2 {
+                width: 100%;
+                border: solid 1px rgb(204, 202, 202);
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 17px;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            .range {
+                margin-top: 10px;
+            }
+
+            .limit {
+                width: 100%;
+                border: solid 1px rgb(204, 202, 202);
+                padding: 5px;
+                border-radius: 5px;
+                font-size: 17px;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+
+                display: none;
+
+                &.active {
+                    display: flex;
+                }
+
+                .value {
+                    color: #454545;
+                    font-size: 15px;
+                }
+
+                .controll {
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        background-color: #e6dfdf;
+                        border-radius: 3px;
+                        margin: 0 2px;
+                        color: #454545;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .tp-sl {
+                margin-top: 10px;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+
+                    .value {
+                        margin-left: 5px;
+                        color: #454545;
+                    }
+                }
+
+                .amount {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin-top: 10px;
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+
+                    input {
+                        width: 45%;
+                        padding: 10px;
+                        border: solid 1px rgb(214, 212, 212);
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        .available {
+            color: #999;
+            margin: 10px 0;
+        }
+
+        .btns {
+            margin-top: 15px;
+
+            .group {
+                width: 100%;
+                margin-bottom: 10px;
+
+                .label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    padding: 5px;
+                    color: rgb(126, 124, 124);
+                }
+
+                .btn {
+                    width: 100%;
+                    background-color: rgb(0, 221, 120);
+                    padding: 8px;
+                    color: #fff;
+                    border-radius: 5px;
+                    text-align: center;
+
+                    &.red {
+                        background-color: rgb(246, 70, 93);
+                    }
+                }
+            }
+        }
+    }
+
+    .momentary-changes {
+        width: 50%;
+        padding: 0 0 0 10px;
+        margin-top: 10px;
+
+        .title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            justify-content: space-between;
+
+            .price {
+                display: flex;
+                flex-direction: column;
+                color: #999;
+                font-size: 12px;
+            }
+
+            .amount {
+                display: flex;
+                flex-direction: column;
+                color: #999;
+                font-size: 12px;
+
+            }
+        }
+
+        .content {
+            margin-top: 20px;
+
+            .item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                height: 20px;
+                position: relative;
+
+
+                .amount {
+                    color: #424242;
+                    font-size: 12px;
+                }
+
+                &.-red {
+                    .width {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 50%;
+                        height: 100%;
+                        background-color: rgb(204 115 115 / 50%);
+                    }
+
+                    .price {
+                        color: rgb(246 70 93);
+                        ;
+                        font-size: 12px;
+                    }
+                }
+
+                &.-green {
+                    .width {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 50%;
+                        height: 100%;
+                        background-color: rgb(173 215 149 / 50%);
+                    }
+
+                    .price {
+                        color: rgba(0, 221, 120);
+                        font-size: 12px;
+                    }
+                }
+
+
+            }
+
+            .main-price {
+                margin: 15px 0;
+
+                p {
+                    color: rgba(0, 221, 120);
+                    font-size: 18px;
+                }
+
+                span {
+                    color: #999;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .filter-fromat-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .default-format {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                border: solid 1px rgb(192, 189, 189);
+                border-radius: 5px;
+                padding: 5px 0;
+                width: 70%;
+
+                .text {
+                    color: #555;
+                    font-size: 14px;
+                }
+
+                svg {
+                    color: #999;
+                }
+            }
+        }
+
+        .format-price-menu {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 200;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+
+            .content {
+                width: 90%;
+                position: absolute;
+                bottom: 0%;
+                right: 5%;
+                transition: all 0.3s ease-in-out;
+
+                .items {
+                    width: 100%;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    .element {
+                        padding: 15px 0;
+                        cursor: pointer;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
+                .cancel {
+                    width: 100%;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 10px;
+                    text-align: center;
+                    color: #454545;
+                    font-weight: bold;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+
+                .content {
+                    bottom: 10%;
+                }
+            }
+        }
+    }
+}
+
+.orders {
+    width: 100%;
+    margin: 50px 0;
+
+    .tab-order {
+        width: 100%;
+        border-bottom: solid 1px rgb(196, 194, 194);
+        display: flex;
+        align-items: center;
+
+        .tab {
+            padding: 10px;
+            color: #454545;
+
+            &.active {
+                font-weight: bold;
+                border-bottom: solid 1px #454545;
+            }
+        }
+
+        .tab:nth-child(2) {
+            margin-left: 15px;
+        }
+    }
+
+    .order-list {
+        padding: 40px 0;
+        text-align: center;
+    }
+}
+
+
+
+//buy-crypto
+
+.buy-crypto {
+    margin-top: 70px;
+
+    .types {
+        display: flex;
+        align-items: center;
+
+        .type {
+            background-color: rgb(247, 240, 240);
+            padding: 5px 10px;
+            width: 70px;
+            text-align: center;
+            color: #575656;
+
+            &.active {
+                color: #6b6bd2;
+                background-color: lightblue;
+            }
+        }
+
+        .type:nth-child(2) {
+            margin-left: 15px;
+        }
+
+        .type:nth-child(3) {
+            margin-left: 15px;
+        }
+    }
+
+    .amount {
+        margin-top: 20px;
+
+        .title {
+            color: #454545;
+        }
+
+        .amount-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: solid 1px rgb(209, 206, 206);
+            border-radius: 3px;
+            margin-top: 10px;
+
+            input {
+                padding: 7px;
+                outline: none;
+                border: none;
+                font-size: 18px;
+                color: #454545;
+            }
+
+            .type-anmount {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: #999;
+                    font-weight: bold;
+                    margin-right: 5px;
+                    margin-top: -5px;
+                    font-size: 17px;
+                }
+
+                .defualt {
+                    color: #454545;
+                }
+
+                svg {
+                    color: #999;
+
+                }
+            }
+        }
+
+    }
+
+    .Guide {
+        margin-top: 40px;
+
+        .question {
+            color: #454545;
+            font-size: 17px;
+        }
+
+        .list {
+            margin-top: 30px;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+                color: #454545;
+
+                svg {
+                    color: #6b6bd2;
+                    background-color: lightblue;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 10px;
+                    padding: 5px;
+                    box-sizing: initial;
+                }
+            }
+        }
+    }
+
+    .type-list {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: #fff;
+        height: 100vh;
+        overflow-y: auto;
+        padding: 10px;
+        z-index: 300;
+        transition: all 0.3s ease-in-out;
+
+        &.active {
+            right: 0;
+        }
+
+        .search-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+
+            .search {
+                background-color: rgb(236, 233, 233);
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+                width: 80%;
+
+                svg {
+                    color: #555;
+                    font-weight: bold;
+                }
+
+                input {
+                    padding: 8px;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    margin-right: 15px;
+                    color: #454545;
+                }
+            }
+
+            .cancel {
+                color: #999;
+                font-size: 17px;
+            }
+        }
+
+        .list {
+            margin-top: 50px;
+            padding: 0 10px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 25px;
+                width: 100%;
+
+                .name {
+                    color: #454545;
+                }
+
+                .currency {
+                    color: #555;
+                }
+            }
+        }
+    }
+}
+
+
+//p2p
+.p2p {
+    .header-p2p {
+        background-color: #f1f2f2;
+        width: 100%;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .back {
+                svg {
+                    font-size: 23px;
+                    color: #454545;
+                }
+            }
+
+            .menu {
+                display: flex;
+                align-items: center;
+
+                .currency-type {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 10px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        object-fit: cover;
+                    }
+
+                    .name {
+                        margin: 0 3px;
+                        color: #454545;
+                    }
+
+                    svg {
+                        color: #454545;
+                    }
+                }
+
+                .drop-menu {
+                    position: relative;
+
+                    svg {
+                        color: #454545;
+                        font-size: 20px;
+
+                    }
+
+                    .drop {
+                        position: absolute;
+                        top: 120%;
+                        right: 0;
+                        background-color: #fff;
+                        border-radius: 5px;
+                        box-shadow: 0 0 3px 1px rgb(242 235 235);
+                        box-sizing: initial;
+                        padding: 10px;
+                        width: 600%;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all 0.3s ease;
+
+                        &.active {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        li {
+                            font-size: 14px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+
+            .type-list {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                background-color: #fff;
+                height: 100vh;
+                overflow-y: auto;
+                padding: 10px;
+                z-index: 300;
+                transition: all 0.3s ease-in-out;
+
+                &.active {
+                    right: 0;
+                }
+
+                .search-box {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 10px;
+
+                    .search {
+                        background-color: rgb(236, 233, 233);
+                        border-radius: 3px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 5px;
+                        width: 80%;
+
+                        svg {
+                            color: #555;
+                            font-weight: bold;
+                        }
+
+                        input {
+                            padding: 8px;
+                            border: none;
+                            outline: none;
+                            background: transparent;
+                            margin-right: 15px;
+                            color: #454545;
+                        }
+                    }
+
+                    .cancel {
+                        color: #999;
+                        font-size: 17px;
+                    }
+                }
+
+                .list {
+                    margin-top: 20px;
+                    padding: 0 10px;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        padding: 20px 0;
+                        width: 100%;
+                        border-bottom: solid 1px rgb(235, 229, 229);
+
+                        .name {
+                            color: #454545;
+                        }
+
+                        img {
+                            width: 20px;
+                            height: 20px;
+                            object-fit: cover;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .tab-p2p {
+            margin-top: 25px;
+
+            .tab {
+                margin-left: 15px;
+                font-size: 18px;
+                color: #454545;
+
+                &.active {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .buy-sell-crypto {
+        margin-top: 30px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .tab-buy-sell {
+            display: flex;
+            align-items: center;
+            border-bottom: solid 1px rgb(221, 218, 218);
+            margin-top: 110px;
+
+            .tab {
+                padding: 10px;
+                cursor: pointer;
+
+                &.active {
+                    font-weight: bold;
+                    border-bottom: solid 1px #454545;
+                }
+            }
+
+            .tab:nth-child(2) {
+                margin-left: 10px;
+            }
+        }
+
+        .amount {
+
+            margin-top: 40px;
+
+            .title {
+                font-size: 14px;
+                color: #454545;
+                margin-bottom: 10px;
+            }
+
+            input {
+                padding: 12px;
+                border-radius: 5px;
+                width: 100%;
+                border: solid 1px rgb(221, 218, 218);
+            }
+
+            .action {
+                margin-top: 50px;
+
+                .action-btn {
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 5px;
+                    background-color: #6b6bd2;
+                    color: #fff;
+
+                    &.red {
+                        background-color: #e68989;
+                    }
+                }
+            }
+        }
+    }
+
+    .flexible-tab {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        .tab-buy-sell {
+            display: flex;
+            align-items: center;
+            border-bottom: solid 1px rgb(221, 218, 218);
+
+            margin-top: 110px;
+
+            .tab {
+                padding: 10px;
+
+                &.active {
+                    font-weight: bold;
+                    border-bottom: solid 1px #454545;
+                }
+            }
+
+            .tab:nth-child(2) {
+                margin-left: 10px;
+            }
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            position: relative;
+
+            .left {
+                display: flex;
+                align-items: center;
+
+                .item {
+                    display: flex;
+                    align-items: center;
+                    color: #454545;
+                    margin-left: 10px;
+                    cursor: pointer;
+
+
+                    svg {
+                        margin-left: 3px;
+                    }
+                }
+
+                .amount-box {
+
+                    .drop-amount {
+                        position: absolute;
+                        width: 90vw;
+                        left: -3px;
+                        background-color: #fff;
+                        top: 110%;
+                        padding: 20px;
+                        display: none;
+
+                        &.active {
+                            display: block;
+                        }
+
+                        input {
+                            padding: 12px;
+                            border: solid 1px rgb(212, 210, 210);
+                            border-radius: 5px;
+                            width: 100%;
+                            margin: 10px 0;
+                        }
+
+                        .btns {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .reset {
+                                padding: 8px;
+                                border: solid 1px rgb(212, 210, 210);
+                                border-radius: 5px;
+                                width: 45%;
+                                text-align: center;
+                            }
+
+                            .ok {
+                                padding: 8px;
+                                border-radius: 5px;
+                                background-color: blue;
+                                color: #fff;
+                                width: 45%;
+                                text-align: center;
+
+                            }
+                        }
+                    }
+                }
+
+                .payment-box {
+                    position: relative;
+
+                    .payment-method-menu {
+                        width: 100%;
+                        height: 100vh;
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        background-color: rgba(0, 0, 0, 0.7);
+                        z-index: 200;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+
+                        .content {
+                            width: 90%;
+                            position: absolute;
+                            bottom: 0%;
+                            right: 5%;
+                            transition: all 0.3s ease-in-out;
+
+                            .items {
+                                width: 100%;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
+                                margin-bottom: 10px;
+
+                                .element {
+                                    padding: 15px 0;
+                                    cursor: pointer;
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                            }
+
+                            .cancel {
+                                width: 100%;
+                                background-color: #fff;
+                                border-radius: 10px;
+                                padding: 10px;
+                                text-align: center;
+                                color: #454545;
+                                font-weight: bold;
+                            }
+                        }
+
+                        &.active {
+                            opacity: 1;
+                            visibility: visible;
+
+                            .content {
+                                bottom: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                .svg {
+                    color: #454545;
+                }
+            }
+        }
+
+        .items {
+            margin-top: 50px;
+        }
+
+        .crypto-user-box {
+            padding: 15px;
+            background-color: #f0ecec;
+            border-radius: 10px;
+            margin: 10px 0;
+
+            .user {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .user-name {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    .text {
+                        color: #454545;
+                        margin-left: 5px;
+                    }
+                }
+
+                .trade-count {
+                    color: #999;
+                    font-size: 14px;
+                }
+            }
+
+            .price {
+                font-size: 20px;
+                color: #454545;
+                font-weight: bold;
+                margin: 15px 0;
+            }
+
+            .action {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+
+                .infromation {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        font-size: 12px;
+                        margin: 5px 0;
+
+                        .text {
+                            color: #999;
+                        }
+
+                        .amount {
+                            color: #454545;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+
+                .btn-action {
+                    color: #fff;
+                    background-color: rgb(0, 221, 120);
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+//single-crypto
+
+.single-crypto {
+    width: 100%;
+    height: 100vh;
+    background: #fbf9f9;
+    position: absolute;
+    z-index: 10000;
+
+    .header-single-crypto {
+        width: 100%;
+
+        .header-title {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fbf9f9;
+            z-index: 10;
+            border-bottom: solid 1px rgb(241, 236, 236);
+
+            .back {
+                font-size: 20px;
+                color: #454545;
+            }
+
+            .menu-icon {
+                display: flex;
+                color: #454545;
+                align-items: center;
+                font-weight: bold;
+
+                .name {
+                    margin-left: 5px;
+                }
+
+                svg {
+                    font-size: 20px;
+                }
+            }
+
+            .star {
+                color: #454545;
+            }
+
+        }
+
+        .price-box {
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .main-price {
+                p {
+                    color: rgb(0, 221, 120);
+                    font-size: 20px;
+                }
+
+                .desc {
+                    display: flex;
+                    margin-top: 5px;
+
+                    span {
+                        color: #999;
+                        font-size: 12px;
+
+                    }
+
+                    .change {
+                        color: rgb(0, 221, 120);
+                        margin-left: 5px;
+                        font-size: 12px;
+
+                    }
+                }
+            }
+
+            .Recent-change {
+                width: 40%;
+
+                .item {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    .time {
+                        font-size: 12px;
+                        color: #999;
+                    }
+
+                    .price {
+                        font-size: 12px;
+                        color: #454545;
+                    }
+                }
+            }
+        }
+
+        .nav-time {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            .item {
+                font-size: 12px;
+                color: #454545;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+
+                &.active {
+                    color: #6b6bd2;
+                }
+            }
+
+            .item.more {
+                position: relative;
+
+                &.acive .text {
+                    color: #6b6bd2;
+                }
+
+                .more-time {
+                    position: absolute;
+                    top: 110%;
+                    right: -100px;
+                    background-color: #fbf9f9;
+                    z-index: 5;
+                    box-shadow: 0 0 3px 1px rgb(241, 240, 240);
+                    width: 50vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 10px;
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+            }
+
+            .item.indicators {
+                position: relative;
+
+                &.acive .text {
+                    color: #6b6bd2;
+                }
+
+                .more-indicators {
+                    position: absolute;
+                    top: 110%;
+                    right: -30px;
+                    background-color: #fbf9f9;
+                    z-index: 5;
+                    box-shadow: 0 0 3px 1px rgb(241, 240, 240);
+                    width: 50vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    padding: 10px;
+                    display: none;
+
+                    &.active {
+                        display: flex;
+                    }
+                }
+            }
+
+            svg {
+                color: #454545;
+            }
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+        }
+
+        .description-crypto {
+            margin-top: 30px;
+            padding-bottom: 75px;
+
+            .description-tab {
+                display: flex;
+                align-items: center;
+
+                .tab {
+                    margin-right: 15px;
+                    color: #454545;
+                    cursor: pointer;
+
+                    &.active {
+                        font-weight: bold;
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            .order-book-section {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .default-format {
+                    display: flex;
+                    color: #555;
+                    align-items: center;
+                }
+            }
+
+            .title-1 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: solid 1px rgb(236, 230, 230);
+                margin-top: 30px;
+
+                .item {
+                    color: #999;
+                    font-size: 12px;
+                }
+
+                .format-price-menu {
+                    width: 100%;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    z-index: 200;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 0.3s ease;
+
+
+
+                    .contents {
+                        width: 90%;
+                        position: absolute;
+                        bottom: 0%;
+                        right: 5%;
+                        transition: all 0.3s ease-in-out;
+
+                        .items {
+                            width: 100%;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            margin-bottom: 10px;
+
+                            .element {
+                                padding: 15px 0;
+                                cursor: pointer;
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+
+                        .cancel {
+                            width: 100%;
+                            background-color: #fff;
+                            border-radius: 10px;
+                            padding: 10px;
+                            text-align: center;
+                            color: #454545;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+
+                        .contents {
+                            bottom: 10%;
+                        }
+                    }
+                }
+            }
+
+            .title-2 {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+
+                .item {
+                    color: #999;
+                    font-size: 12px;
+                }
+            }
+
+            .content {
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .red {
+                    width: 50%;
+
+                    .item {
+                        flex-direction: row-reverse;
+                    }
+                }
+
+                .green {
+                    width: 50%;
+                }
+
+                .item {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    height: 20px;
+                    position: relative;
+
+
+                    .amount {
+                        color: #424242;
+                        font-size: 12px;
+                    }
+
+                    &.-red {
+                        .width {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 50%;
+                            height: 100%;
+                            background-color: rgb(204 115 115 / 50%);
+                        }
+
+                        .price {
+                            color: rgb(246 70 93);
+                            ;
+                            font-size: 12px;
+                            padding: 0 5px;
+                        }
+                    }
+
+                    &.-green {
+                        .width {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 50%;
+                            height: 100%;
+                            background-color: rgb(173 215 149 / 50%);
+                        }
+
+                        .price {
+                            color: rgba(0, 221, 120);
+                            font-size: 12px;
+                            padding: 0 5px;
+                        }
+                    }
+
+
+                }
+
+                .main-price {
+                    margin: 15px 0;
+
+                    p {
+                        color: rgba(0, 221, 120);
+                        font-size: 18px;
+                    }
+
+                    span {
+                        color: #999;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .trade-section {
+                margin-top: 20px;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .tades-title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px 0;
+
+                    .item {
+                        color: #999;
+                        font-size: 12px;
+                    }
+                }
+
+                .trade-items {
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+
+                        .time {
+                            color: #454545;
+                            font-size: 12px;
+                        }
+
+                        .amount {
+                            color: #454545;
+                            font-size: 12px;
+                        }
+
+                        .price {
+                            color: rgb(0, 221, 120);
+                            font-size: 12px;
+
+                        }
+                    }
+                }
+            }
+
+            .coin-info-section {
+                margin-top: 20px;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .title {
+                    font-size: 20px;
+                    color: #454545;
+                }
+
+                .informaion {
+                    margin-top: 20px;
+
+                    .item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 10px;
+                        color: #555;
+                        font-size: 14px;
+                    }
+                }
+
+                .links {
+                    margin-top: 10px;
+
+                    .title {
+                        font-size: 17px;
+                        color: #454545;
+                    }
+
+                    .link {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 10px;
+
+                        a {
+                            display: inline-block;
+                            margin-right: 10px;
+                            color: #6b6bd2;
+                        }
+                    }
+                }
+
+                .intro {
+                    margin-top: 20px;
+
+                    .title {
+                        font-size: 17px;
+                        color: #454545;
+                    }
+
+                    p {
+                        margin-top: 10px;
+                        color: rgb(110, 105, 105);
+                        font-size: 14px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+
+        .nav-buy-sell {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border-top: solid 1px rgb(240, 236, 236);
+            background-color: #fbf9f9;
+
+            button {
+                padding: 10px;
+                background-color: rgb(0, 221, 120);
+                border-radius: 5px;
+                color: rgb(245, 245, 245);
+                border: none;
+                outline: none;
+                padding: 12px 0;
+                width: 45%;
+                font-weight: bold;
+
+                &.red {
+                    background-color: rgb(246, 70, 93);
+                }
+            }
+
+        }
+    }
+}
+
+//crypto-list-futures
+
+.crypto-list-futures {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 100px;
+
+    .crypto-list-futures-menu {
+        width: 100%;
+        overflow-x: auto;
+        border-bottom: solid 1px rgb(209, 209, 209);
+        position: fixed;
+        top: 40px;
+        right: 0;
+        z-index: 10;
+        border-bottom: solid 1px rgb(212, 207, 207);
+        background-color: #fff;
+
+        .menu-item {
+            width: 530px;
+            display: flex;
+            flex-wrap: nowrap;
+
+            .item {
+                padding: 10px;
+                cursor: pointer;
+                font-size: 15px;
+                color: #454545;
+            }
+
+            .item.active {
+                border-bottom: solid 1px #000;
+            }
+        }
+    }
+
+    .crypto-list-item {
+        margin-top: 20px;
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 80px;
+            right: 0;
+            width: 100%;
+            padding: 7px 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px 1px #f0f0f0;
+
+            .name {
+                font-size: 14px;
+                color: #999;
+                margin-left: 15px;
+            }
+
+            .price {
+                display: flex;
+
+                div {
+                    margin-right: 25px;
+                    font-size: 14px;
+                    color: #999;
+                }
+
+                .last-price {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .name {
+                color: #424242;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .desc {
+                display: flex;
+                align-items: center;
+                width: 40%;
+                justify-content: space-between;
+
+                .price {
+                    margin-right: 10px;
+
+                    .least {
+                        color: #424242;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+
+                    .most {
+                        color: #555;
+                        font-size: 11px;
+                    }
+                }
+
+                .percentage {
+                    width: 70px;
+                    background-color: rgb(0, 221, 120);
+                    border-radius: 2px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+
+                .percentage.red {
+                    background-color: rgb(246, 70, 93);
+                }
+            }
+        }
+    }
+}
